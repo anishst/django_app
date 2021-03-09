@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, CreateView
 from blog.models import Post
+from blog.forms import PostForm
 
 # Create your views here.
 
@@ -9,7 +10,6 @@ from blog.models import Post
 
 
 # Class view
-
 class HomeView(ListView):
 
     # define which model to use
@@ -27,7 +27,8 @@ class PostDetailView(DetailView):
 
 class AddPostView(CreateView):
     model = Post
+    form_class = PostForm
     template_name = 'blog_add.html'
-    fields = '__all__'  # put all fields on page
+    # fields = '__all__'  # put all fields on page
     # spcifify fields
     # fields = ('title', 'body') # put specific fields    
