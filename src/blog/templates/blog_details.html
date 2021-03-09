@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ post.title }} {% endblock %}
+
+{% block content %}
+
+<div class="col-md-12">
+
+</div>
+<h1>{{ post.title }}</h1>
+<p>
+    {{ post.body }}
+</p>
+<div>
+    <!-- https://getbootstrap.com/docs/4.0/components/badge/ -->
+    <span class="badge badge-secondary">Posted On: {{ post.created_on }} </span> 
+    <span class="badge badge-success">By:  {{ post.author.first_name }}  {{ post.author.last_name }}  </span>
+    <span class="badge badge-danger pull-right">Category</span>
+    <span class="badge badge-warning">Posted On: {{ post.updated_on }} </span> 
+    <span class="badge badge-warning">Favorite: {{ post.favorite }} </span> 
+</div>
+
+<p>
+    <br/>
+<a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
+</p>
+</div>
+
+{% endblock %}

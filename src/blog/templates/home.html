@@ -1,12 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Blog</title>
-</head>
-<body>
-    My Django Blog!
-</body>
-</html>
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="col-md-12">
+
+{% for post in object_list %}
+
+    <h1><a href="{% url 'post-detail' post.pk %}">{{ post.title }}</a></h1>
+    <p>
+        <!-- TO DO DISPLAY RANDOM IMAGE -->
+        <!-- <img src="https://source.unsplash.com/random/300x300" class="rounded float-left" /> -->
+        {{ post.body }}
+    </p>
+    <div>
+        <!-- https://getbootstrap.com/docs/4.0/components/badge/ -->
+        <span class="badge badge-secondary">Posted On: {{ post.created_on }} </span> 
+        <span class="badge badge-success">By:  {{ post.author.first_name }}  {{ post.author.last_name }}  </span>
+        <span class="badge badge-danger pull-right">Category</span>
+    </div>
+    
+<hr/>
+{%endfor %}
+
+</div>
+{% endblock %}
