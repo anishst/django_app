@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} Edit Blog Post{% endblock %}
+
+{% block content %}
+<h1> Delete Blog Post</h1>
+<h3>You are about to delete blog post with title: {{ post.title }}</h3>
+
+<p>Are you sure?</p>
+<!-- bootstrap style -->
+<div class="form-group">
+<!--https://docs.djangoproject.com/en/3.1/topics/forms/-->
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
+</div>
+{% endblock %}
