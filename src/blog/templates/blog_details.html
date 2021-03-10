@@ -9,7 +9,7 @@
 </div>
 <h1>{{ post.title }}</h1>
 <p>
-    {{ post.body }}
+    {{ post.body | safe }}
 </p>
 <div>
     <!-- https://getbootstrap.com/docs/4.0/components/badge/ -->

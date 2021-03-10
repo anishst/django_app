@@ -11,7 +11,9 @@
     <p>
         <!-- TO DO DISPLAY RANDOM IMAGE -->
         <!-- <img src="https://source.unsplash.com/random/300x300" class="rounded float-left" /> -->
-        {{ post.body }}
+        <!-- {{ post.body }} -->
+        <!-- using slice to truncate description over 200 chars -->
+        {{ post.body|slice:":200"|safe }}
     </p>
     <div>
         <!-- https://getbootstrap.com/docs/4.0/components/badge/ -->
