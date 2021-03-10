@@ -1,17 +1,24 @@
 # Django App
 
-App based on Python Django web Framework
+App based on Python [Django web Framework](https://www.djangoproject.com/)
 
 ## Current Apps
 
-## Blog
+- Blog
 
+## Setup
+
+1. create virtual env (windows): ```python -m venv env```
+2. activate env: ```.\env\Scripts\activate```
+3. install requirement: ```pip install -r requirements.txt```
+4. create super user: ```python manage.py createsuperuser```
+4. do migrations: ```python manage.py migrate```
+5. run app: ```python manage.py runserver```
 ## Tasks
 
 - [x] Setup basic Django project
 - [x] add basic blog
 - [x] add CRUD features
-- [ ] import existing data to new databases
 - [ ] add favorite star icon to turn on/off
 - [ ] add tasks model
 - [ ] add ckeditor for rich text editing
@@ -19,6 +26,7 @@ App based on Python Django web Framework
     - requires migration after changes and add to settings.py under INSTALLED_APPS
     - add RichTextField to forms
 - [ ] [try crispy forms](https://simpleisbetterthancomplex.com/tutorial/2018/08/13/how-to-use-bootstrap-4-forms-with-django.html)
+- [ ] add [tests](https://docs.djangoproject.com/en/3.1/intro/tutorial05/#introducing-automated-testing)
 - [ ] containerize?
 
 

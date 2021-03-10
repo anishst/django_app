@@ -5,7 +5,15 @@ from django.urls import reverse
 from django.utils import timezone
 from ckeditor.fields import RichTextField
 
+class Category(models.Model):
+    name = models.CharField(max_length=255)
 
+    def __str__(self):
+        return self.name 
+
+    def get_absolute_url(self):
+        # return reverse('post-detail', args=(str(self.id)))
+        return reverse('home')
 class Post(models.Model):
     title = models.CharField(max_length=120)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -13,6 +21,8 @@ class Post(models.Model):
     created_on = models.DateTimeField(default=timezone.now)
     updated_on = models.DateTimeField(auto_now=True)
     favorite = models.BooleanField(default=False)
+    category = models.CharField(max_length=255, default="General")
+    # category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title + ' | ' + str(self.author)
