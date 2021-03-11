@@ -22,10 +22,17 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     favorite = models.BooleanField(default=False)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    likes = models.ManyToManyField(User, related_name='blog_posts')
 
     def __str__(self):
         return self.title + ' | ' + str(self.author)
 
+    def total_likes(self):
+        """Returns number of likes for the post"""
+        return self.likes.count()
+    
+    def is_favorite(self):
+        return self.favorite
     #   return user to detail page when form is submitted
     def get_absolute_url(self):
         # return reverse('post-detail', args=(str(self.id)))

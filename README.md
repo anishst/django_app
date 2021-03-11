@@ -39,6 +39,7 @@ App based on Python [Django web Framework](https://www.djangoproject.com/)
 - [ ] add [tests](https://docs.djangoproject.com/en/3.1/intro/tutorial05/#introducing-automated-testing)
 - [ ] containerize?
 
+
 ## Resources:
 - [Django official page](https://www.djangoproject.com/)
 - [Tutorial](https://docs.djangoproject.com/en/3.1/intro/tutorial01/)
