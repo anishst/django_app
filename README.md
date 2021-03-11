@@ -14,6 +14,16 @@ App based on Python [Django web Framework](https://www.djangoproject.com/)
 4. create super user: ```python manage.py createsuperuser```
 4. do migrations: ```python manage.py migrate```
 5. run app: ```python manage.py runserver```
+
+
+## Shell Usage
+
+1. enter db shell: ```python manage.py dbshell``
+    - if command doesn't work, make sure sqlie3 exe in path var: https://www.sqlite.org/download.html
+    - commands
+        - to see tables: ```.tables```
+        - see schema: ```.schema tablename```
+
 ## Tasks
 
 - [x] Setup basic Django project
@@ -28,7 +38,6 @@ App based on Python [Django web Framework](https://www.djangoproject.com/)
 - [ ] [try crispy forms](https://simpleisbetterthancomplex.com/tutorial/2018/08/13/how-to-use-bootstrap-4-forms-with-django.html)
 - [ ] add [tests](https://docs.djangoproject.com/en/3.1/intro/tutorial05/#introducing-automated-testing)
 - [ ] containerize?
-
 
 ## Resources:
 - [Django official page](https://www.djangoproject.com/)
