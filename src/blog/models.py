@@ -6,7 +6,7 @@ from django.utils import timezone
 from ckeditor.fields import RichTextField
 
 class Category(models.Model):
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=255, null=True)
 
     def __str__(self):
         return self.name 
@@ -21,8 +21,8 @@ class Post(models.Model):
     created_on = models.DateTimeField(default=timezone.now)
     updated_on = models.DateTimeField(auto_now=True)
     favorite = models.BooleanField(default=False)
-    category = models.CharField(max_length=255, default="General")
-    # category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    # category = models.CharField(max_length=255, default="General")
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title + ' | ' + str(self.author)
