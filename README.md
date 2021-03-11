@@ -39,6 +39,10 @@ App based on Python [Django web Framework](https://www.djangoproject.com/)
 - [ ] add [tests](https://docs.djangoproject.com/en/3.1/intro/tutorial05/#introducing-automated-testing)
 - [ ] containerize?
 
+## Running Tests
+
+1. blog tests: ```python manage.py test blog```
+
 
 ## Resources:
 - [Django official page](https://www.djangoproject.com/)
@@ -52,6 +56,8 @@ App based on Python [Django web Framework](https://www.djangoproject.com/)
         - var = {{}}
         - block
 - [random text gen](https://www.lipsum.com/)
+- Testing
+    - [Django Testing Playlist](https://www.youtube.com/watch?v=qwypH3YvMKc&list=PLbpAWbHbi5rMF2j5n6imm0enrSD9eQUaM)
 - Examples:
     - [Blog Example](https://djangocentral.com/building-a-blog-application-with-django/)    
     - [Dockerizing Django with Postgres, Gunicorn, and Nginx](https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/)
