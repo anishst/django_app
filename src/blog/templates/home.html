@@ -4,10 +4,11 @@
 {% block content %}
 
 <div class="col-md-12">
-
+<h1> Blog Posts</h1>
+<hr/>
 {% for post in object_list %}
 
-    <h1><a href="{% url 'post-detail' post.pk %}">{{ post.title }}</a></h1>
+    <h2><a href="{% url 'post-detail' post.pk %}">{{ post.title }}</a></h2>
     <p>
         <!-- TO DO DISPLAY RANDOM IMAGE -->
         <!-- <img src="https://source.unsplash.com/random/300x300" class="rounded float-left" /> -->
@@ -19,7 +20,7 @@
         <!-- https://getbootstrap.com/docs/4.0/components/badge/ -->
         <span class="badge badge-secondary">Posted On: {{ post.created_on }} </span> 
         <span class="badge badge-success">By:  {{ post.author.first_name }}  {{ post.author.last_name }}  </span>
-        <span class="badge badge-info pull-right">{{ post.category }}</span>
+        <span class="badge badge-info pull-right"><a href="{% url 'category' post.category_id %}"">{{ post.category }}</a></span>
     </div>
     
 <hr/>

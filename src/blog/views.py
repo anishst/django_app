@@ -8,6 +8,11 @@ from django.urls import reverse_lazy
 
 # def home(request):
 #     return render(request, 'home.html', {})
+def CategoryView(request, cats):
+    # query to get items by category
+    category_posts = Post.objects.filter(category_id=cats)
+    category_name = Category.objects.filter(id=cats).first()
+    return render(request, 'categories.html', {'category_name': category_name, 'category_posts': category_posts})
 
 
 # Class view
