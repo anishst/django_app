@@ -6,6 +6,17 @@
 <div class="col-md-12">
 <h1> Blog Posts</h1>
 <hr/>
+<!-- bootstrap style -->
+<div class="form-group">
+    <!--https://docs.djangoproject.com/en/3.1/topics/forms/-->
+    <form method="post" action="{% url 'post-search' %}"  enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" placeholder="Enter Search term" id="query" name="query" required class="form-control" autofocus>
+        <br/>
+        <button type="submit" class="btn btn-success" >Search</button>
+    
+    </form>
+    </div>
 {% for post in object_list %}
 
     <h2><a href="{% url 'post-detail' post.pk %}">{{ post.title }}</a></h2>

@@ -4,6 +4,7 @@ from blog.models import Post, Category
 from blog.forms import PostForm
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
+from django.db.models import Q
 # Create your views here.
 
 # def home(request):
@@ -13,6 +14,19 @@ def CategoryView(request, cats):
     category_posts = Post.objects.filter(category_id=cats)
     category_name = Category.objects.filter(id=cats).first()
     return render(request, 'categories.html', {'category_name': category_name, 'category_posts': category_posts})
+
+def SearchResultsView(request):
+    # query to get items by category - https://docs.djangoproject.com/en/3.1/topics/db/queries/
+
+    # if request.method == 'POST':
+    #     print(request.POST.get("query"))
+    query = request.POST.get("query")
+    # https://docs.djangoproject.com/en/3.1/topics/db/queries/#complex-lookups-with-q-objects
+    query_results = Post.objects.filter(Q(body__contains=query) | Q(title__contains=query))
+    
+    print(query_results, query)
+
+    return render(request, 'search_results.html', {'query': query, 'query_results': query_results})
 
 def LikeView(request, pk):
     # get post using form value 

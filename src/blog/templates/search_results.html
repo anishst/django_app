@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="col-md-12"></div>
+
+{% if query_results %}
+    <h1>Found {{ query_results.count }} Posts Related to {{ query }}</h1>
+
+    {% for post in query_results %}
+
+        <h1><a href="{% url 'post-detail' post.pk %}">{{ post.title }}</a></h1>
+        <p>
+            <!-- TO DO DISPLAY RANDOM IMAGE -->
+            <!-- <img src="https://source.unsplash.com/random/300x300" class="rounded float-left" /> -->
+            <!-- {{ post.body }} -->
+            <!-- using slice to truncate description over 200 chars -->
+            {{ post.body|slice:":200"|safe }}
+        </p>
+        <div>
+            <!-- https://getbootstrap.com/docs/4.0/components/badge/ -->
+            <span class="badge badge-secondary">Posted On: {{ post.created_on }} </span> 
+            <span class="badge badge-success">By:  {{ post.author.first_name }}  {{ post.author.last_name }}  </span>
+
+        </div>
+        
+    <hr/>
+{%endfor %}
+{% else %}
+    <h1>Sorry couldn't find anything for {{ query }}....</h1>
+{% endif %}
+    
+
+
+
+
+
+
+</div>
+{% endblock %}
