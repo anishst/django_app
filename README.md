@@ -44,6 +44,9 @@ App based on Python [Django web Framework](https://www.djangoproject.com/)
 
 1. blog tests: ```python manage.py test blog```
 
+## Running using pytest
+1. pytest
+
 
 ## Resources:
 - [Django official page](https://www.djangoproject.com/)
@@ -59,6 +62,7 @@ App based on Python [Django web Framework](https://www.djangoproject.com/)
 - [random text gen](https://www.lipsum.com/)
 - Testing
     - [Django Testing Playlist](https://www.youtube.com/watch?v=qwypH3YvMKc&list=PLbpAWbHbi5rMF2j5n6imm0enrSD9eQUaM)
+    - [Testing Tools](https://docs.djangoproject.com/en/3.1/topics/testing/tools/)
 - Examples:
     - [Blog Example](https://djangocentral.com/building-a-blog-application-with-django/)    
     - [Dockerizing Django with Postgres, Gunicorn, and Nginx](https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/)
