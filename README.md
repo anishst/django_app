@@ -71,3 +71,9 @@ App based on Python [Django web Framework](https://www.djangoproject.com/)
 - Examples:
     - [Blog Example](https://djangocentral.com/building-a-blog-application-with-django/)    
     - [Dockerizing Django with Postgres, Gunicorn, and Nginx](https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/)
+
+
+## KNown issues
+
+1. RuntimeError: Database access not allowed, use the "django_db" mark
+fix add marker to pytests
