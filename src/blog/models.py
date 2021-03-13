@@ -17,15 +17,16 @@ class Category(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=120)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    body = RichTextField(blank=True, null=True)
-    created_on = models.DateTimeField(default=timezone.now)
+    # body = RichTextField(blank=True, null=True)
+    body = models.TextField(blank=True, null=True)
+    created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     favorite = models.BooleanField(default=False)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     likes = models.ManyToManyField(User, related_name='blog_posts')
 
     def __str__(self):
-        return self.title + ' | ' + str(self.author)
+        return str(self.id) + '|' +  self.title + ' | ' + str(self.author)
 
     def total_likes(self):
         """Returns number of likes for the post"""

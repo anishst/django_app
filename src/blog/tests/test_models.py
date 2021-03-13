@@ -16,16 +16,25 @@ import pytest
 class TestModels():
 
 
-    def test_create_category(self):
-        category1 = Category.objects.create(name="Test")
-        print(category1.name)
     
     def test_create_post(self):
-        pass
-        # TODO not working using user in post
-        # print(self.user.id)
-        # newuser = User(2,username="Foo").save()
-        # post1 = Post.objects.create(title="Blog Title", body="Body Text", created_on=timezone.now(), category=category1, author=newuser.id)
-        # print(post1)
+        # this worked on shell
+        # category1 = Category.objects.create(name="Test")
+        # Post.objects.create(title="Blog Title", body="Body Text", created_on=timezone.now(), category=Category.objects.create(name="Tes2"), author=User(1))
+        # Post.objects.create(title="Blog Title", body="Body Text", created_on=timezone.now(), category=Category.objects.filter(name='Python').first().id, author=User(1)).save()
 
-   
+    # def test_create_category(self):
+    #     category1 = Category.objects.create(name="New One")
+    #     category1.save()
+
+    # FOR SHELL PROACTICE
+    # from blog.models import Post, Category
+    # Post.objects.all()
+    # Post.objects.all().first()
+    # post1 = Post.objects.all().first()
+    # post1.id
+
+    # cat1 = Category.objects.filter(name='Python').first()
+    # Category.objects.filter(name='Python')
+    # cat1.id
+    # Category.objects.filter(name='Python').first().id
