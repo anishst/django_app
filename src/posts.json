@@ -1,0 +1,51 @@
+[
+    {
+      "title": "My first Post",
+      "body": "My first updated post!\r\n\r\nThis is exciting!",
+      "category": 4,
+      "author": 1
+    },
+    {
+      "title": "A Second Post",
+      "body": "This is a post from a different user...",
+      "category": 4,
+      "author": 1
+    },
+    {
+      "title": "My third Post3",
+      "body": "My first updated post!\r\n\r\nThis is exciting!",
+      "category": 4,
+      "author": 1
+    },
+    {
+      "title": "A 4th Post4",
+      "body": "This is a post  different user...",
+      "category": 4,
+      "author": 1
+    },
+    {
+      "title": "My fitth Post",
+      "body": "My first updated post!\r\n\r\nThis is exciting!",
+      "category": 4,
+      "author": 1
+    },
+    {
+      "title": "new 6th Post",
+      "body": "This is a post from a different user...",
+      "category": 4,
+      "author": 1
+    },
+    {
+      "title": "7th Post3",
+      "body": "My first updated post!\r\n\r\nThis is exciting!",
+      "category": 4,
+      "author": 1
+    },
+    {
+      "title": "A 8th Post4",
+      "body": "This is a post  different user...",
+      "category": 4,
+      "author": 1
+    }
+  
+  ]

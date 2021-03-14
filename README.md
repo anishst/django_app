@@ -50,30 +50,3 @@ App based on Python [Django web Framework](https://www.djangoproject.com/)
 1. pytest
 
 
-## Resources:
-- [Django official page](https://www.djangoproject.com/)
-- [Tutorial](https://docs.djangoproject.com/en/3.1/intro/tutorial01/)
-- Video tutorials
-    - [codemy blog app](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi)
-    - [codemy stock app](https://www.youtube.com/watch?v=iu3V4cOJW4I&list=PLCC34OHNcOtqNxahjUPo2BPC2qrVNawYK)
-    - [corey](https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p)
-- [VS Code Setup](https://code.visualstudio.com/docs/python/tutorial-django)
-- [VS Code plugins](https://morioh.com/p/b6323e6cdfca)
-    - [Djaneiro - Django Snippets](https://marketplace.visualstudio.com/items?itemName=thebarkman.vscode-djaneiro)
-        - var = {{}}
-        - block
-- [random text gen](https://www.lipsum.com/)
-- Queries
-    - [DB Q](https://docs.djangoproject.com/en/3.1/topics/db/queries/)
-- Testing
-    - [Django Testing Playlist](https://www.youtube.com/watch?v=qwypH3YvMKc&list=PLbpAWbHbi5rMF2j5n6imm0enrSD9eQUaM)
-    - [Testing Tools](https://docs.djangoproject.com/en/3.1/topics/testing/tools/)
-- Examples:
-    - [Blog Example](https://djangocentral.com/building-a-blog-application-with-django/)    
-    - [Dockerizing Django with Postgres, Gunicorn, and Nginx](https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/)
-
-
-## KNown issues
-
-1. RuntimeError: Database access not allowed, use the "django_db" mark
-fix add marker to pytests

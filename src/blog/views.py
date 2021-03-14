@@ -46,6 +46,8 @@ class HomeView(ListView):
     template_name = 'home.html'
     # order by created_on desc order
     ordering = ['-created_on']
+    # apply pagination: 5 posts per page
+    paginate_by = 5
 
     # sortying by created on field; desc order
     # def get_queryset(self):

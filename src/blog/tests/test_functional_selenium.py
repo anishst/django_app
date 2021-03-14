@@ -34,7 +34,8 @@ class TestDjangoApp():
     def test_category_page(self):
         self.driver.get("http://localhost:8000/add_category")
         print(self.driver.title)
-    
+        self.driver.find_element_by_name('name').send_keys("New One added via Selenium")
+        self.driver.find_element_by_xpath("//button[@type='submit']").click()
 
     def test_add_new_post(self):
         self.driver.get("http://localhost:8000/add_post")

@@ -18,6 +18,7 @@ class TestModels():
 
     
     def test_create_post(self):
+        pass
         # this worked on shell
         # category1 = Category.objects.create(name="Test")
         # Post.objects.create(title="Blog Title", body="Body Text", created_on=timezone.now(), category=Category.objects.create(name="Tes2"), author=User(1))
