@@ -6,6 +6,7 @@
 <div class="col-md-12">
 <h1> Blog Posts</h1>
 <hr/>
+<p></p>There are {{ paginator.count }} record(s) in the Knowledge Base. Showing 10{{ paginator.num}} records per page.</p>
 <!-- bootstrap style -->
 <div class="form-group">
     <!--https://docs.djangoproject.com/en/3.1/topics/forms/-->
@@ -13,7 +14,9 @@
         {% csrf_token %}
         <input type="text" placeholder="Enter Search term" id="query" name="query" required class="form-control" autofocus>
         <br/>
-        <button type="submit" class="btn btn-success" >Search</button>
+        <!-- https://icons.getbootstrap.com/icons/search/ -->
+        <button type="submit" class="btn btn-success" ><i class="bi bi-search"></i> Search</button>
+        
     
     </form>
     </div>
@@ -58,6 +61,9 @@
   <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
   <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
 {% endif %}
+
+
+
 
 {% endif %}
 

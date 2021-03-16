@@ -5,8 +5,16 @@
 
 <div class="col-md-12"></div>
 
+<!-- <form method="post" action="{% url 'home' %}">
+    {% csrf_token %}
+    <input type="submit" value="Return to Search Results" id="return" name="retrun" autofocus>
+</form> -->
+<a href="{% url 'home' %}" class="btn btn-secondary">Return to Search Results</a>
+
 {% if query_results %}
     <h1>Found {{ query_results.count }} Posts Related to {{ query }}</h1>
+
+    
 
     {% for post in query_results %}
 

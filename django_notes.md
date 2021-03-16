@@ -120,7 +120,7 @@ for post in posts_json:
 	post.save()
 ```
 
-### Django Paginator
+### [Django Paginator](https://docs.djangoproject.com/en/dev/topics/pagination/)
 
 
 ```python
@@ -144,11 +144,8 @@ p1.has_next() # true
 # get next page #
 p1.next_page_number() # 2
 
-
-
-
 ```
-
+[How to Paginate with Django](https://simpleisbetterthancomplex.com/tutorial/2016/08/03/how-to-paginate-with-django.html)
 ### Django Testing
 
 - https://docs.djangoproject.com/en/3.1/topics/testing/tools/
