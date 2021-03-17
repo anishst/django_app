@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
 from blog.models import Post, Category
 from blog.forms import PostForm
 from django.urls import reverse_lazy, reverse
@@ -9,6 +9,8 @@ from django.db.models import Q
 
 # def home(request):
 #     return render(request, 'home.html', {})
+   
+
 def CategoryView(request, cats):
     # query to get items by category
     category_posts = Post.objects.filter(category_id=cats)
@@ -52,6 +54,10 @@ class HomeView(ListView):
     # sortying by created on field; desc order
     # def get_queryset(self):
     #     return Post.objects.order_by('-created_on')
+
+
+class AboutPageView(TemplateView):
+    template_name = 'about.html'
 
 class PostDetailView(DetailView):
     model = Post
