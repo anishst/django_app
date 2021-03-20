@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} Login{% endblock %}
+
+{% block content %}
+<h1> Login</h1>
+
+<!-- bootstrap style -->
+<div class="form-group">
+    <!--https://docs.djangoproject.com/en/3.1/topics/forms/-->
+    <form method="post">
+        {% csrf_token %}
+        <!-- form.media : to suppor rich text editor -->
+        {{ form.media }}
+        {{ form.as_p}}
+        <button type="submit" class="btn btn-success">Login</button>
+
+    </form>
+</div>
+{% endblock %}

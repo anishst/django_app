@@ -40,6 +40,7 @@ INSTALLED_APPS = [
      'django_extensions',
     'blog',
     'ckeditor',
+    'users'
 ]
 
 MIDDLEWARE = [
@@ -121,3 +122,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# redirect url for login and 
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
