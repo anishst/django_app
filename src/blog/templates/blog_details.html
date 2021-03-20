@@ -13,23 +13,26 @@
 </p>
 <div>
     <!-- https://getbootstrap.com/docs/4.0/components/badge/ -->
-    <span class="badge badge-secondary">Posted On: {{ post.created_on }} </span> 
-    <span class="badge badge-success">By:  {{ post.author.first_name }}  {{ post.author.last_name }}  </span>
+    <span class="badge badge-secondary">Posted On: {{ post.created_on }} </span>
+    <span class="badge badge-success">By: {{ post.author.first_name }} {{ post.author.last_name }} </span>
     <span class="badge badge-info pull-right">{{ post.category }}</span>
-    <span class="badge badge-warning">Updated On: {{ post.updated_on }} </span> 
-    <span class="badge badge-dark">Favorite: {{ post.favorite }} </span> 
+    <span class="badge badge-warning">Updated On: {{ post.updated_on }} </span>
+    <span class="badge badge-dark">Favorite: {{ post.favorite }} </span>
 </div>
-<br/>
+<br />
 <p>
-    <a href="{% url 'home' %}" class="btn btn-secondary">Back</a> <a href="{% url 'post-edit' post.pk %}" class="btn btn-warning">Edit</a>
+    {% if user.is_authenticated %}
+    <a href="{% url 'home' %}" class="btn btn-secondary">Back</a> <a href="{% url 'post-edit' post.pk %}"
+        class="btn btn-warning">Edit</a>
     <a href="{% url 'post-delete' post.pk %}" class="btn btn-danger">Delete</a>
+    {% endif %}
 </p>
 
 <p>
     <!-- like button -->
 <form action="{% url 'post-like' post.pk %}" method="POST">
     {% csrf_token %}
-    <button type="submit" name="post_id" value="{{post.id}}", class="btn btn-primary">Like</button>
+    <button type="submit" name="post_id" value="{{post.id}}" , class="btn btn-primary">Like</button>
 
 </form>
 
