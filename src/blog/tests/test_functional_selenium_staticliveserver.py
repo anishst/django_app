@@ -1,5 +1,7 @@
 from django.utils import timezone
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
 from ..models import Post, User, Category
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from django.urls import reverse
@@ -9,7 +11,9 @@ import time
 class TestProjectPage(StaticLiveServerTestCase):
 
     def setUp(self):
-        self.browser = webdriver.Chrome()
+        options = Options()
+        options.headless = True
+        self.browser = webdriver.Chrome(chrome_options=options)
         self.browser.maximize_window()
 
     def tearDown(self):
