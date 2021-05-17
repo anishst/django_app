@@ -41,6 +41,7 @@ App based on Python [Django web Framework](https://www.djangoproject.com/)
 - [ ] add [tests](https://docs.djangoproject.com/en/3.1/intro/tutorial05/#introducing-automated-testing)
         - https://docs.djangoproject.com/en/3.1/internals/contributing/writing-code/unit-tests/
 - [ ] containerize?
+- [x] use github actions `````.github\workflows\python-app.yml`````
 
 ## Running Tests
 

@@ -130,3 +130,5 @@ LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", __file__)
+import django
+django.setup()
