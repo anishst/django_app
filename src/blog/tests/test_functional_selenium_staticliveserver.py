@@ -22,5 +22,5 @@ class TestProjectPage(StaticLiveServerTestCase):
     def test_home_page(self):
         self.browser.get(self.live_server_url)
         blog_title = self.browser.find_element_by_tag_name('H1')
-        self.assertEquals(blog_title.text, "Blog Posts")
+        self.assertEqual(blog_title.text, "Blog Posts")
         time.sleep(5)
