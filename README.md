@@ -60,3 +60,14 @@ App based on Python [Django web Framework](https://www.djangoproject.com/)
 1. build : ```docker build --tag python-django .```
 2. run: ```docker run --name djangoapp --publish 8000:8000 python-django```
 3. apply migration by logging into container: ```docker exec -it djangoapp /bin/bash ```
+
+### Using Docker Compose
+
+[official example](https://docs.docker.com/samples/django/)
+
+1. build image: ```docker-compose build```
+2. run: ```docker-compose up```
+3. apply migrations; app = service name specified in yml file:
+    - apply migrations:```docker-compose exec app python manage.py makemigrations```
+    - migrate: ```docker-compose exec app python manage.py migrate```
+4. to make updates in dev and see changes: ```docker-compose up --build```

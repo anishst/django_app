@@ -29,8 +29,8 @@ DEBUG = True
 # ALLOWED_HOSTS = []
 # workaround for DisallowedHost at / Invalid HTTP_HOST header when run from docker
 # https://stackoverflow.com/questions/40582423/invalid-http-host-header
-ALLOWED_HOSTS = ['192.168.1.25', 'localhost', '127.0.0.1']
-
+# ALLOWED_HOSTS = ['192.168.1.25', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
