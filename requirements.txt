@@ -1,26 +1,15 @@
-asgiref==3.3.1
-atomicwrites==1.4.0
-attrs==20.3.0
-colorama==0.4.4
-coverage==5.5
-Django==3.1.7
-django-ckeditor==6.0.0
-django-js-asset==1.2.2
-importlib-metadata==3.7.2
-iniconfig==1.1.1
-packaging==20.9
-pluggy==0.13.1
-py==1.10.0
-pyparsing==2.4.7
-pytest==6.2.2
-pytest-cov==2.11.1
-pytest-django==4.1.0
-pytz==2021.1
-selenium==3.141.0
-sqlparse==0.4.1
-toml==0.10.2
-typing-extensions==3.7.4.3
-urllib3==1.26.3
-zipp==3.4.1
-django_extensions
+# -----------------------------------------------------------------------------------------
+#            Python Packages Needed for Django App
+#
+# to install all at once use this command: pip install -r requirements.txt
+# See website for more info: https://pip.pypa.io/en/stable/user_guide/#requirements-files
+# -----------------------------------------------------------------------------------------
+Django                  # django framework
+django-ckeditor         # optional for adding RichTextField
+pytest                  # pytest framework
+pytest-django           # pytest framework for django
+selenium                # for running selenium test scripts
+django_extensions       # for test purposes
+psycopg2-binary          # for postgress db interaction
+#mysqlclient             # mysql db
 mixer

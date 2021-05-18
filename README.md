@@ -71,3 +71,13 @@ App based on Python [Django web Framework](https://www.djangoproject.com/)
     - apply migrations:```docker-compose exec app python manage.py makemigrations```
     - migrate: ```docker-compose exec app python manage.py migrate```
 4. to make updates in dev and see changes: ```docker-compose up --build```
+5. create superuser: ```docker-compose exec app python manage.py createsuperuser```
+
+## Switching to Postgress DB
+1. edit compose file to add image; add ```psycopg2-binary``` to requirements.txt
+2. updated db in: ```src\web_project\settings.py```
+3. run ```docker-compose up```
+    - in linux, if you get permission denied, run ```sudo chown -R $USER:$USER .```
+4. apply migrations
+    - apply migrations:```docker-compose exec app python manage.py makemigrations```
+    - migrate: ```docker-compose exec app python manage.py migrate```
