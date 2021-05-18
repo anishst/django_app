@@ -53,4 +53,10 @@ App based on Python [Django web Framework](https://www.djangoproject.com/)
 ## Running using pytest
 1. pytest
 
+## Docker Practice
 
+### Using Dockerfile
+
+1. build : ```docker build --tag python-django .```
+2. run: ```docker run --name djangoapp --publish 8000:8000 python-django```
+3. apply migration by logging into container: ```docker exec -it djangoapp /bin/bash ```

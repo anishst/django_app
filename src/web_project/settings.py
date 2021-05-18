@@ -26,7 +26,10 @@ SECRET_KEY = 'z2g$vfto9d2k4o7^s9g$j6habupgcog*(kdl&b=pw--^n7*5-!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+# workaround for DisallowedHost at / Invalid HTTP_HOST header when run from docker
+# https://stackoverflow.com/questions/40582423/invalid-http-host-header
+ALLOWED_HOSTS = ['192.168.1.25', 'localhost', '127.0.0.1']
 
 
 # Application definition
