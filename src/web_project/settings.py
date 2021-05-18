@@ -93,6 +93,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
+        # when running from github actions use localhost; when running using docker-compose use DB_HOST env value
         'HOST': os.environ.get('DB_HOST', 'localhost'),
         'PORT': 5432,
     }
