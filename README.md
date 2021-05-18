@@ -2,6 +2,8 @@
 
 App based on Python [Django web Framework](https://www.djangoproject.com/)
 
+![example workflow](https://github.com/anishst/django_app/actions/workflows/python-app.yml/badge.svg)
+
 ## Current Apps
 
 - Blog
@@ -42,6 +44,7 @@ App based on Python [Django web Framework](https://www.djangoproject.com/)
         - https://docs.djangoproject.com/en/3.1/internals/contributing/writing-code/unit-tests/
 - [ ] containerize?
 - [x] use github actions `````.github\workflows\python-app.yml`````
+    - [x] added build status icon
 
 ## Running Tests
 
