@@ -13,7 +13,7 @@ class TestProjectPage(StaticLiveServerTestCase):
     def setUp(self):
         options = Options()
         options.headless = True
-        self.browser = webdriver.Chrome(chrome_options=options)
+        self.browser = webdriver.Chrome(options=options)
         self.browser.maximize_window()
 
     def tearDown(self):

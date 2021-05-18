@@ -12,7 +12,7 @@ def driver_init(request):
     if request.param == "chrome":
         options = Options()
         options.headless = True
-        web_driver = webdriver.Chrome(chrome_options=options)
+        web_driver = webdriver.Chrome(options=options)
     if request.param == "edge":
         web_driver = webdriver.Edge()
 
